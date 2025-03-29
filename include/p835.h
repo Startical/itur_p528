@@ -1,3 +1,5 @@
+#include <cmath>
+
 #ifdef _WIN32
 #define DLLEXPORT extern "C" __declspec(dllexport)
 #else
