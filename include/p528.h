@@ -3,7 +3,11 @@
 
 using namespace std;
 
+#ifdef _WIN32
 #define DLLEXPORT extern "C" __declspec(dllexport)
+#else
+#define DLLEXPORT extern "C" __attribute__((visibility("default")))
+#endif
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
